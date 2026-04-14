@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOT PROSPEK TIM - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🏆 HOT PROSPEK TIM</h1>
+            <p class="subtitle">Dashboard Tracking Real-time</p>
+        </header>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <h3>Total Prospek</h3>
+                <p class="stat-number" id="totalProspect">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Update Terakhir</h3>
+                <p class="stat-time" id="lastUpdate">--:--:--</p>
+            </div>
+        </section>
+
+        <!-- Control Section -->
+        <section class="control-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Cari nama atau sekolah..."
+                    class="search-input"
+                >
+            </div>
+            <button id="refreshBtn" class="btn-refresh">🔄 Refresh Data</button>
+        </section>
+
+        <!-- Table Section -->
+        <section class="table-section">
+            <table class="prospects-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Asal Sekolah</th>
+                        <th>Tanggal Janji Bayar</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="5" class="loading">⏳ Memuat data...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>📊 Hot Prospek Tim Dashboard | Data terhubung langsung dengan Google Sheet</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
